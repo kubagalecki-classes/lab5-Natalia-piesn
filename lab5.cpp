@@ -6,21 +6,22 @@ using namespace std;
 
 int main()
 {
-    list< int > numbers = {};
-    cout << numbers.front() << " " << numbers.back() << endl;
+    /*
+      list< int > numbers = {};
+      cout << numbers.front() << " " << numbers.back() << endl;
 
-    numbers.push_back(1);
-    numbers.push_back(2);
-    cout << numbers.front() << " " << numbers.back() << endl;
-    cout << &numbers.front() << " " << &numbers.back() << endl;
+      numbers.push_back(1);
+      numbers.push_back(2);
+      cout << numbers.front() << " " << numbers.back() << endl;
+      cout << &numbers.front() << " " << &numbers.back() << endl;
 
-    numbers.push_front(-1);
-    numbers.push_front(-2);
-    numbers.push_front(-3);
-    cout << numbers.front() << " " << numbers.back() << endl;
-    cout << &numbers.front() << " " << &numbers.back() << endl;
-    
-    /*vector< Human > people;
+      numbers.push_front(-1);
+      numbers.push_front(-2);
+      numbers.push_front(-3);
+      cout << numbers.front() << " " << numbers.back() << endl;
+      cout << &numbers.front() << " " << &numbers.back() << endl;
+      */
+    vector< Human > people;
     string          name;
     int             a = 1;
     while (a == 1) {
@@ -37,8 +38,8 @@ int main()
         }
     }
     cout << people.size() << " " << people.capacity() << endl;
-    for (unsigned int i = 0; i < people.size(); i++) {
-        cout << people[i].getName() << endl;
+    vector< Human >::iterator it = people.begin();
+    for (it = people.begin(); it != people.end(); it++) {
+        cout << it->getName() << endl;
     }
-    */
 }
