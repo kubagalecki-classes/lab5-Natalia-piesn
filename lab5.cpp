@@ -15,13 +15,16 @@ int main()
     numbers.push_front(-1);
     numbers.push_front(-3);
     numbers.push_front(-2);
-    list< int >::iterator it = numbers.begin();
-    for (it = numbers.begin(); it != numbers.end(); it++) {
-        cout << *it << endl;
-    }
+
     list< int >::const_reverse_iterator itr = numbers.rbegin();
     for (itr = numbers.crbegin(); itr != numbers.crend(); itr++) {
         cout << *itr << endl;
+    }
+
+    list< int >::iterator it = numbers.begin();
+    for (it = numbers.begin(); it != numbers.end(); it++) {
+        *it += 1;
+        cout << *it << endl;
     }
     /*
   vector< Human > people;
