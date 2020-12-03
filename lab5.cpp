@@ -4,11 +4,7 @@ using namespace std;
 
 int main()
 {
-    vector< int > vs;
-    cout << vs.size() << " " << vs.capacity() << endl;
-    for (int i = 0; i < 20; i++) {
-        vs.push_back(i);
-        cout << &vs[0] << endl;
-    }
+    vector< int > vs{100, 42};
+
     cout << vs.size() << " " << vs.capacity() << endl;
 }
