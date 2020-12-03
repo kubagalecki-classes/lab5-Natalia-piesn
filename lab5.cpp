@@ -16,37 +16,32 @@ int main()
     numbers.push_front(-3);
     numbers.push_front(-2);
 
-    list< int >::const_reverse_iterator itr = numbers.rbegin();
-    for (itr = numbers.crbegin(); itr != numbers.crend(); itr++) {
+    for (auto itr = numbers.crbegin(); itr != numbers.crend(); itr++) {
         cout << *itr << endl;
     }
 
-    list< int >::iterator it = numbers.begin();
-    for (it = numbers.begin(); it != numbers.end(); it++) {
-        *it += 1;
-        cout << *it << endl;
+    for (const int e : numbers) {
+        cout << e << endl;
     }
-    /*
-  vector< Human > people;
-  string          name;
-  int             a = 1;
-  while (a == 1) {
-      cin >> name;
-      if (name == "end") {
-          a = 0;
-      }
-      else if (name == "pop") {
-          people.pop_back();
-      }
-      else {
-          Human person(name, 0, true, true);
-          people.push_back(person);
-      }
-  }
-  cout << people.size() << " " << people.capacity() << endl;
-  vector< Human >::iterator it = people.begin();
-  for (it = people.begin(); it != people.end(); it++) {
-      cout << it->getName() << endl;
-  }
-  */
+
+    vector< Human > people;
+    string          name;
+    int             a = 1;
+    while (a == 1) {
+        cin >> name;
+        if (name == "end") {
+            a = 0;
+        }
+        else if (name == "pop") {
+            people.pop_back();
+        }
+        else {
+            Human person(name, 0, true, true);
+            people.push_back(person);
+        }
+    }
+    cout << people.size() << " " << people.capacity() << endl;
+    for (const Human& e : people) {
+        cout << e.getName() << endl;
+    }
 }
