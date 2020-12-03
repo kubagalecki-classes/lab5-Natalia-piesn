@@ -7,19 +7,19 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {
-    for (Human& e : people)
-  {
-    e.birthday();
-  }
-  vector<char> pet_likes;
-  for (auto itr = people.crbegin(); itr != people.crend(); itr++) {
+  std::vector<char> petl;
+
+  for (auto itr = people.rbegin(); itr != people.rend(); itr++) {
+
+    itr -> birthday();
+
     if(itr->isMonster() == true){
-      pet_likes.push_back('n');
+      petl.emplace_back('n');
     }
     else
     {
-      pet_likes.push_back('y');
+      petl.emplace_back('y');
     }
   }
-  return pet_likes;
+  return {petl};
 }
