@@ -19,6 +19,10 @@ int main()
     for (it = numbers.begin(); it != numbers.end(); it++) {
         cout << *it << endl;
     }
+    list< int >::const_reverse_iterator itr = numbers.rbegin();
+    for (itr = numbers.crbegin(); itr != numbers.crend(); itr++) {
+        cout << *itr << endl;
+    }
     /*
   vector< Human > people;
   string          name;
